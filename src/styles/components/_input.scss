@@ -1,0 +1,128 @@
+.input {
+    &__label {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.6px;
+        color: var.$color-textblack;
+        & ~ .input__box {
+            margin-top: 12px;
+        }
+    }
+    &__box {
+        position: relative;
+    }
+    &__field {
+        width: 100%;
+        height: 50px;
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.32px;
+        color: var.$color-textblack;
+        border: 1px solid var.$color-line04;
+        border-radius: 8px;
+        &::placeholder {
+            color: var.$color-text04;
+        }
+        &.focus {
+            border-color: var.$color-textblack;
+        }
+        // disabled
+        &:disabled {
+            border: none;
+            background: var.$color-bg01;
+            color: var.$color-text04;
+        }
+        &:read-only.focus {
+            border-color: var.$color-line04; 
+        }
+    }
+    &__delete-button {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: url('/img/icon/ico_text_delete.png') no-repeat 0 0;
+        background-size: 100% auto;
+        &.is-show {
+            display: block;
+        }
+    }   
+    &__erroe-message {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.48px;
+    }
+    &.error {
+        .input__label {
+            color: var.$color-fail;
+        }
+        .input__field {
+            border-color: var.$color-fail;
+        }
+        .input__message {
+            margin-top: 4px;
+            padding-left: 16px;
+            color: var.$color-fail;
+        }
+    }
+    // unit 포함
+    &.input--has-unit {
+        .input__field {
+            padding-right: 65px;
+            // text-align: right;
+        }
+        .input__delete-button {
+            right: 42px;
+        }
+        .input__unit {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            font-weight: 700;
+            color: var.$color-textblack;
+        }
+    }
+    // 버튼이 바깥에 있을 때
+    &.input--side-button {
+        .input__box {
+            display: flex;
+            gap: 8px;
+        }
+        .input__field {
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: calc(100% - 88px);
+        }
+        .button {
+            flex-basis: 80px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border: 1px solid #888;
+            border-radius: 8px;
+        }
+        .input__delete-button {
+            right: 104px;
+        }
+    }
+    &.input--verify-number {
+        .input__field {
+            padding-right: 56px;
+        }
+        .number {
+            position: absolute;
+            top: 50%;
+            right: 104px;
+            transform: translateY(-50%);
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: #00807F;
+        }
+    }
+}

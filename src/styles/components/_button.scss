@@ -1,0 +1,150 @@
+.button {
+    font-size: 16px;
+    padding: 0 0.8rem;
+    height: 50px;
+    background: #fff;
+    font-weight: 400;
+    color: #222;
+    border-radius: 8px;
+    letter-spacing: -0.32px;
+    border: 1px solid #110f0f;
+    &.block {
+        display: block;
+        width: 100%;
+    }
+    &.button--primary {
+        height: 50px;
+        background: #222;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 8px;
+        border: 0;
+    }
+    &.button--round,
+    &.button--round-line {
+        padding: 0 16px;
+        width: auto;
+        height: 36px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.28px;
+        color: #666;
+        background-color: #edeff6;
+        border: 0;
+        border-radius: 18px;
+    }
+    &.button--round {
+        &.is-active {
+            background: #222;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+    &.button--round-line {
+        background: #fff;
+        color: #666;
+        border: 1px solid #ddd;
+        &.is-active {
+            font-weight: 600;
+            color: #01a6a5;
+            border: 1px solid #01a6a5;
+        }
+    }
+    &.mini {
+        padding: 0 10px;
+        width: auto;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #666;
+        border: 1px solid #e9e9e9;
+        border-radius: 6px;
+        &:disabled {
+            font-weight: 400;
+            color: #999;
+        }
+    }
+    &.small {
+        height: 44px;
+        font-weight: 400;
+    }
+    &.large {
+    }
+    &.button--link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.button--icon-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.icon-left {
+            .icon {
+                order: 1;
+            }
+            .button__text {
+                order: 2;
+            }
+        }
+    }
+    &:disabled,
+    &.disabled {
+        //class는 a태그 일때만 적용
+        background: #eee;
+        font-weight: 600;
+        color: #767676;
+        border: 0;
+        pointer-events: none;
+    }
+    // personal
+    &.filter-button {
+        height: 32px;
+        padding: 0 12px;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #222;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        .icon-filter {
+            @include icon('ico_filter_24', 12px);
+        }
+    }
+    &.button--amount {
+        height: 40px;
+        padding: 0 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #767676;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        &.is-active {
+            border-color: #058484;
+            color: #058484;
+        }
+    }
+}
+
+// group button
+.button-group {
+    display: flex;
+    gap: 8px;
+    .button {
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    &.button-group--column {
+        flex-direction: column;
+        .button {
+            flex-basis: auto;
+        }
+    }
+    &.button-group--amount {
+        gap: 6px;
+        .button--amount {
+            flex-basis: calc(100% / 4);
+        }
+    }
+}
