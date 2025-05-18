@@ -3,15 +3,18 @@
     position: relative;
     display: flex;
     background: #fff;
-        #{$root} {
+    #{$root} {
         &__menu {
-            padding: 7.6rem .6rem 4rem;
+            padding: 7.6rem 0.6rem 4rem;
             position: sticky;
             top: 0;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             height: fit-content;
             flex-basis: 24rem;
+            background: #333;
+            height: 100vh;
         }
         &__content {
             padding: 5rem;
@@ -31,7 +34,6 @@
     $root: &;
     #{$root} {
         &__list {
-
         }
         &__item {
             margin: 4px 0;
@@ -41,17 +43,17 @@
             padding: 12px 20px 12px 30px;
             font-size: 14px;
             font-weight: 400;
-            color: #333;
+            color: #fff;
             border-radius: 8px;
             &.guide-gnb__link--main {
-                color: #222;
+                color: #fff;
                 font-weight: 700;
             }
             &:hover {
-                background: rgba(0, 0, 0, 0.06);
+                background: rgba(255, 255, 255, 0.06);
             }
             &:active {
-                color: #146DE8;
+                color: #f3aa0e;
                 font-weight: 700;
             }
         }
@@ -75,8 +77,11 @@
         align-items: center;
         padding: 2.4rem 3rem;
         width: 100%;
-        background-color: #146DE8;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),0 1px 6px -1px rgba(0, 0, 0, 0.02),0 2px 4px 0 rgba(0, 0, 0, 0.02);
+        background-color: #f3aa0e;
+        box-shadow:
+            0 1px 2px 0 rgba(0, 0, 0, 0.03),
+            0 1px 6px -1px rgba(0, 0, 0, 0.02),
+            0 2px 4px 0 rgba(0, 0, 0, 0.02);
         backdrop-filter: blur(8px);
         font-size: 2.8rem;
         font-weight: 700;
@@ -93,7 +98,7 @@
     &__title {
         font-size: 2.6rem;
         font-weight: 600;
-        color: #146DE8;
+        color: #f3aa0e;
         letter-spacing: -0.48px;
         & ~ .guide__title {
             margin-top: 5rem;
@@ -103,20 +108,20 @@
         margin-top: 2.2rem;
         border: 1.5px solid #ddd;
         border-radius: 1rem;
-        padding: 3rem  2rem;
+        padding: 3rem 2rem;
     }
     &__sub-title {
         position: relative;
         font-size: 1.8rem;
         font-weight: 700;
-        color: #146DE8;
+        color: #f3aa0e;
         &::before {
             content: '';
             display: inline-block;
             margin-right: 5px;
             width: 4px;
             height: 4px;
-            background: #146DE8;
+            background: #f3aa0e;
             border-radius: 50%;
             vertical-align: 4px;
         }
@@ -173,10 +178,10 @@
         line-height: 2.4rem;
         color: #666;
         border: 1px solid #ddd;
-        border-radius: .8rem;
+        border-radius: 0.8rem;
         .imporatant {
             font-weight: 600;
-            color: #00807F;
+            color: #00807f;
         }
     }
 }

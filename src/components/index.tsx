@@ -16,3 +16,4 @@ export { TooltipGroup } from '@/components/TooltipGroup';
 export { SelectBox } from '@/components/Select';
 export { Alert } from '@/components/Alert';
 export { BottomSheet } from '@/components/BottomSheet';
+export { Tabs } from '@/components/Tabs';

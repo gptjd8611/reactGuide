@@ -8,3 +8,6 @@ export { TooltipGuide } from '@/guide/Tooltip';
 export { AlertGuide } from '@/guide/Alert';
 export { SelectGuide } from '@/guide/Select';
 export { BottomSheetGuide } from '@/guide/BottomSheet';
+export { TabGuide } from '@/guide/Tab';
+export { AccodionGuide } from '@/guide/Accodion';
+export { ToastPopupGuide } from '@/guide/ToastPopup';
